@@ -35,11 +35,11 @@ const Home = () => {
           </p>
 
           <div className={styles.priceContainer}>
-            <div>
-              <h1>$125</h1>
+            <div className={styles.price}>
+              <h1>$125.00</h1>
               <h5>50%</h5>
             </div>
-            <h3>$250.00</h3>
+            <h5>$250.00</h5>
           </div>
         </aside>
       </div>

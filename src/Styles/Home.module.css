@@ -64,3 +64,29 @@
   line-height: 1.5;
   color: var(--dark-grayish-blue);
 }
+
+.description .priceContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.description .priceContainer > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description .priceContainer .price h5 {
+  padding: 5px;
+  border: transparent 1px solid;
+  background-color: var(--pale-orange-color);
+  color: orange;
+  border-radius: 10%;
+  margin: 0 10px;
+}
+
+.description .priceContainer h5 {
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+}
