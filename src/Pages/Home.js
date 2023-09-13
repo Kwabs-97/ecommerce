@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import styles from "../Styles/Home.module.css";
 import mainItem from "../assets/images/image-product-1.jpg";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
 import { GrFormPrevious, GrFormNext } from "react-icons/gr";
 
@@ -56,6 +57,11 @@ const Home = () => {
               <button onClick={decrementCounter}>-</button>
               <span>{counter}</span>
               <button onClick={incrementCounter}>+</button>
+            </div>
+            <div className={styles.addToCart}>
+              <button>
+                <ShoppingCartOutlinedIcon className={styles.cartIcon} /> <span>Add to cart</span>
+              </button>
             </div>
           </section>
         </aside>
