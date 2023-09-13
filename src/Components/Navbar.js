@@ -24,12 +24,20 @@ const Navbar = () => {
     <nav className={styles.navContainer}>
       <div className={styles.navItemsContainer}>
         <div className={styles.hamburger}>
-          {!istoggled && <AiOutlineMenu onClick={toggleHandler} />}
+          {!istoggled && <AiOutlineMenu onClick={toggleHandler} className={styles.hamburger} />}
 
           <h1>sneakers</h1>
         </div>
+
+        <div className={styles.navPC}>
+          <NavLink>Collections</NavLink>
+          <NavLink>Men</NavLink>
+          <NavLink>Women</NavLink>
+          <NavLink>About</NavLink>
+          <NavLink>Contact</NavLink>
+        </div>
         <div className={styles.cart}>
-          <ShoppingCartOutlinedIcon />
+          <ShoppingCartOutlinedIcon className={styles.cartIcon} />
 
           <div className={styles.profile}>
             <img src={avatar} alt="avatar" />
