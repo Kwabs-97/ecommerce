@@ -6,12 +6,95 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-font: "Kumbh Sans", sans-serif;
+  --grayish-blue: hsl(220, 14%, 75%);
+  --black: hsl(0, 0%, 0%);
+  --very-dark-blue: hsl(220, 13%, 13%);
+}
+
 .navContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.3s ease;
+}
+
+.navContainer svg {
+  color: var(--grayish-blue);
+}
+
+.navContainer .hamburger {
+  font-family: var(--primary-font);
+  font-weight: 700;
+}
+
+.navContainer .navItemsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 12px 16px;
+  transition: all 0.3s ease;
 }
 
 .navContainer .navItemsContainer .hamburger {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navContainer .navItemsContainer .hamburger h1 {
+  margin: 0 12px;
+}
+
+.navContainer .navItemsContainer .cart {
+  display: flex;
+}
+
+.navContainer .navItemsContainer .cart img {
+  width: 24px;
+  height: 24px;
+  margin: 0 12px;
+}
+
+.navContainer .dropdown {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.navContainer .sidebarItems {
+  position: absolute;
+  top: 18px;
+  right: 0;
+  left: 16px;
+  transition: all 0.3s ease;
+}
+
+.navContainer .sidebarItems > svg {
+  margin-bottom: 30px;
+}
+.navContainer .dropdown .sidebar .sidebarLinks {
+  display: flex;
+  flex-direction: column;
+
+  font-family: var(--primary-font);
+}
+
+.navContainer .dropdown .sidebar .sidebarLinks a {
+  text-decoration: none;
+  margin: 10px 0;
+  font-family: var(--primary-font);
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+
+.navContainer .dropdown .sidebarBackground {
+  width: 60%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: darkgray;
+  transition: all 0.3s ease;
 }
