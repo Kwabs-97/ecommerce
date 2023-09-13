@@ -5,6 +5,8 @@
   --black: hsl(0, 0%, 0%);
   --very-dark-blue: hsl(220, 13%, 13%);
   --pale-orange-color: hsl(25, 100%, 94%);
+  --orange-color: hsl(26, 100%, 55%);
+  --dark-grayish-blue: hsl(219, 9%, 45%);
 }
 
 * {
@@ -28,13 +30,12 @@
 }
 
 .mainContainer .img .iconsContainer {
-  position: absolute;
-  top: 35%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 0 50px;
+  top: 35%;
+  position: absolute;
 }
 
 .mainContainer .img .iconsContainer .icon {
@@ -45,4 +46,21 @@
   justify-content: center;
   align-items: center;
   padding: 5px;
+}
+
+.description {
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.description h4 {
+  color: var(--orange-color);
+  margin: 12px 0;
+}
+
+.description p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--dark-grayish-blue);
 }
