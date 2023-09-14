@@ -1,0 +1,32 @@
+/** @format */
+
+.slides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.hidden {
+  display: none;
+}
+
+.arrow {
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  fill: white;
+  cursor: pointer;
+}
+
+.leftArrow {
+  left: 1rem;
+}
+
+.rightArrow {
+  right: 1rem;
+}
