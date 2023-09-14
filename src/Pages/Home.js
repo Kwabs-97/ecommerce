@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../Styles/Home.module.css";
 import mainItem from "../assets/images/image-product-1.jpg";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
@@ -8,9 +8,18 @@ import Carousel from "../Components/Carousel";
 
 const Home = () => {
   const [counter, setCounter] = useState(0);
+  const [discountPrice, setDiscountPrice] = useState(0);
+
+  const price = 250.0;
+  const discount = 50;
+
+  useEffect(() => {
+    setDiscountPrice(price - (price * discount) / 100);
+    console.log(discountPrice);
+  });
 
   function decrementCounter() {
-    setCounter((prevCounter) => (prevCounter -= 1));
+    setCounter((prevCounter) => prevCounter > 0 && prevCounter - 1);
   }
 
   function incrementCounter() {
@@ -35,10 +44,10 @@ const Home = () => {
 
           <div className={styles.priceContainer}>
             <div className={styles.price}>
-              <h1>$125.00</h1>
-              <h5>50%</h5>
+              <h1>{`$${discountPrice}`}</h1>
+              <h4>{`${discount}%`}</h4>
             </div>
-            <h5>$250.00</h5>
+            <h5>{`$ ${price}`}</h5>
           </div>
 
           <section className={styles.counterContainer}>
