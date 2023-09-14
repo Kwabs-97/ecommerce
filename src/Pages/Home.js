@@ -4,8 +4,7 @@ import React, { useState } from "react";
 import styles from "../Styles/Home.module.css";
 import mainItem from "../assets/images/image-product-1.jpg";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-
-import { GrFormPrevious, GrFormNext } from "react-icons/gr";
+import Carousel from "../Components/Carousel";
 
 const Home = () => {
   const [counter, setCounter] = useState(0);
@@ -21,17 +20,7 @@ const Home = () => {
     <main className={styles.main}>
       <div className={styles.mainContainer}>
         <div className={styles.imgContainer}>
-          <div className={styles.img}>
-            <img src={mainItem} alt="mainItemImg" />
-            <div className={styles.iconsContainer}>
-              <button className={styles.icon}>
-                <GrFormPrevious />
-              </button>
-              <button className={styles.icon}>
-                <GrFormNext />
-              </button>
-            </div>
-          </div>
+          <Carousel />
           <section className={styles.subImg}></section>
         </div>
         <aside className={styles.description}>
