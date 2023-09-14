@@ -44,7 +44,7 @@ const Home = () => {
 
           <div className={styles.priceContainer}>
             <div className={styles.price}>
-              <h1>{`$${discountPrice}`}</h1>
+              <h1>{`$${discountPrice}.00`}</h1>
               <h4>{`${discount}%`}</h4>
             </div>
             <h5>{`$ ${price}`}</h5>
