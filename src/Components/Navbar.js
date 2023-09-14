@@ -37,7 +37,9 @@ const Navbar = () => {
           <NavLink>Contact</NavLink>
         </div>
         <div className={styles.cart}>
-          <ShoppingCartOutlinedIcon className={styles.cartIcon} />
+          <NavLink to="/cart">
+            <ShoppingCartOutlinedIcon className={styles.cartIcon} />
+          </NavLink>
 
           <div className={styles.profile}>
             <img src={avatar} alt="avatar" />
