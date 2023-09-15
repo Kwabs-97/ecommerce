@@ -6,6 +6,7 @@ import Carousel from "../Components/Carousel";
 import ProductItem from "../Components/ProductItem";
 
 import { productsData } from "../Data/Products";
+import Cart from "../Cart/Cart";
 
 const Home = (props) => {
   const [counter, setCounter] = useState(0);
@@ -13,11 +14,12 @@ const Home = (props) => {
   return (
     <main className={styles.main}>
       <div className={styles.mainContainer}>
+        
+        <Cart />
         <div className={styles.imgContainer}>
           <Carousel />
           <section className={styles.subImg}></section>
         </div>
-
         {productsData.map((product) => (
           <ProductItem
             name={product.name}

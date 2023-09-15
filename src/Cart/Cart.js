@@ -1,11 +1,24 @@
-import React from 'react'
+/** @format */
+
+import React from "react";
+import { productsData } from "../Data/Products";
+import CartItem from "./CartItem";
+import styles from "./Cart.module.css";
 
 const Cart = () => {
   return (
-    <div>
-      
+    <div className={styles.cartCont}>
+      {productsData.map((product) => (
+        <CartItem
+          key={product.id}
+          img={product.img}
+          name={product.name}
+          price={product.price}
+          quantity={product.quantity}
+        />
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;

@@ -1,11 +1,27 @@
 /** @format */
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../store/cart-slice";
+import { ShopContext } from "../context/shop-context";
 
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import styles from "../Styles/ProductItem.module.css";
 
 const ProductItem = (props) => {
+  const dispatch = useDispatch();
+
+  const addToCartHandler = () => {
+    dispatch(
+      cartActions.addToCart({
+        id: props.id,
+        name: props.name,
+        description: props.description,
+        price: props.price,
+        discount: props.discount,
+      })
+    );
+  };
 
   const [counter, setCounter] = useState(0);
   function decrementCounter() {
@@ -16,7 +32,8 @@ const ProductItem = (props) => {
     setCounter((nextCounter) => (nextCounter += 1));
   }
 
-  console.log(props);
+  const { addToCart } = useContext(ShopContext);
+
   return (
     <aside className={styles.description}>
       <h4>Sneaker Company</h4>
@@ -38,7 +55,7 @@ const ProductItem = (props) => {
           <button onClick={incrementCounter}>+</button>
         </div>
         <div className={styles.addToCart}>
-          <button>
+          <button onClick={() => addToCart(props.id)}>
             <ShoppingCartOutlinedIcon className={styles.cartIcon} /> <span>Add to cart</span>
           </button>
         </div>

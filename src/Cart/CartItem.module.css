@@ -1,0 +1,23 @@
+/** @format */
+
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+position: absolute;
+border: transparent solid 1px;
+border-radius: 20px;
+background-color: white;
+
+
+}
+
+
+.cartContainer main{
+    display: flex;
+}
+
+.cartContainer main img {
+  width: 100%;
+  height: 100%;
+}
