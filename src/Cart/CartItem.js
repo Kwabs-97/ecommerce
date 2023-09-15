@@ -16,7 +16,7 @@ const CartItem = (props) => {
           <div className={styles.img}>
             <img src={produtcImg} alt="productIMG" />
           </div>
-          <div>
+          <div className={styles.productDetails}>
             <div>
               <span>{props.name}</span>
             </div>

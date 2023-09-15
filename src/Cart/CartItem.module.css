@@ -4,17 +4,15 @@
   display: flex;
   flex-direction: column;
   margin: 10px;
-position: absolute;
-border: transparent solid 1px;
-border-radius: 20px;
-background-color: white;
-
-
+  position: absolute;
+  border: transparent solid 1px;
+  border-radius: 20px;
+  background-color: white;
+  padding: 0 10px;
 }
 
-
-.cartContainer main{
-    display: flex;
+.cartContainer main {
+  display: flex;
 }
 
 .cartContainer main img {
