@@ -13,9 +13,9 @@ const CartItem = (props) => {
           <span>Cart</span>
         </header>
         <main>
-          <div className={styles.img}>
+        
             <img src={produtcImg} alt="productIMG" />
-          </div>
+         
           <div className={styles.productDetails}>
             <div>
               <span>{props.name}</span>
@@ -30,7 +30,7 @@ const CartItem = (props) => {
           </div>
         </main>
         <div className={styles.checkout}>
-          <button></button>
+          <button>Checkout</button>
         </div>
       </div>
     </div>

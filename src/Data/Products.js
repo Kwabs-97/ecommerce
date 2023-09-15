@@ -4,7 +4,7 @@ export const productsData = [
   {
     id: 1,
     img: productImg,
-    name: "The Fall Limited Edition",
+    name: "Fall Limited Edition Sneakers",
     price: "250",
     discount: "50",
     discountPrice: "125",

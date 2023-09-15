@@ -22,15 +22,46 @@
 
 .cartContainer main {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header {
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid var(--grayish-blue);
+}
+
+header span {
+  font-weight: 900;
+  font-size: 14px;
+}
+
+main .img {
+  display: flex;
+  box-sizing: border-box;
 }
 
 .cartContainer main img {
-  width: 35%;
-  height: 55%;
+  width: 20%;
   border-radius: 5px;
+}
+
+.productDetails {
+  display: inline-block;
+  margin: 40px 0;
 }
 
 .productDetails div span {
   font-size: small;
   color: var(--dark-grayish-blue);
+}
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--orange-color);
+  color: white;
+  font-weight: 600;
+  margin-bottom: 40px;
 }
