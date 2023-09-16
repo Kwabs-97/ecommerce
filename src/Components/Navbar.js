@@ -2,11 +2,11 @@
 
 import React, { useState } from "react";
 
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineClose, AiOutlineShoppingCart } from "react-icons/ai";
 
-import MenuSharpIcon from "@mui/icons-material/MenuSharp";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
+import { useDispatch } from "react-redux";
+import { uiActions } from "../store/ui-slice";
+
 import avatar from "../assets/images/image-avatar.png";
 
 import { NavLink } from "react-router-dom";
@@ -15,6 +15,11 @@ import styles from "../Styles/Navbar.module.css";
 
 const Navbar = () => {
   const [istoggled, setIsToggled] = useState(false);
+  const dispatch = useDispatch();
+
+  const cartToggleHandler = () => {
+    dispatch(uiActions.toggle());
+  };
 
   const toggleHandler = () => {
     setIsToggled(!istoggled);
@@ -37,7 +42,7 @@ const Navbar = () => {
           <NavLink>Contact</NavLink>
         </div>
         <div className={styles.cart}>
-          <ShoppingCartOutlinedIcon className={styles.cartIcon} />
+          <AiOutlineShoppingCart className={styles.cartIcon} onClick={cartToggleHandler} />
 
           <div className={styles.profile}>
             <img src={avatar} alt="avatar" />

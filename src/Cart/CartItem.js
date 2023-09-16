@@ -13,20 +13,19 @@ const CartItem = (props) => {
           <span>Cart</span>
         </header>
         <main>
-        
-            <img src={produtcImg} alt="productIMG" />
-         
+          <img src={produtcImg} alt="productIMG" />
+
           <div className={styles.productDetails}>
             <div>
               <span>{props.name}</span>
             </div>
-            <div>
-              <span>price</span> x<span>quantity</span>
+            <div className={styles.price}>
+              <span>{`$${props.price}.00`}</span> x <span>quantity</span>
               <span>totalPrice</span>
             </div>
           </div>
           <div>
-            <RiDeleteBin5Line />
+            <RiDeleteBin5Line className={styles.cartIcon} />
           </div>
         </main>
         <div className={styles.checkout}>

@@ -1,6 +1,7 @@
 /** @format */
 
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import styles from "../Styles/Home.module.css";
 import Carousel from "../Components/Carousel";
 import ProductItem from "../Components/ProductItem";
@@ -11,11 +12,13 @@ import Cart from "../Cart/Cart";
 const Home = (props) => {
   const [counter, setCounter] = useState(0);
 
+  const showcart = useSelector((state) => state.uiReducer.cartIsVisible);
+
   return (
     <main className={styles.main}>
       <div className={styles.mainContainer}>
-        
-        <Cart />
+        {showcart && <Cart />}
+
         <div className={styles.imgContainer}>
           <Carousel />
           <section className={styles.subImg}></section>
