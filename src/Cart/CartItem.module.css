@@ -114,7 +114,7 @@ main .cartIcon {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 105px 70px;
+  padding: 100px 78px;
 }
 
 .cartContainer .emptyCart p {
