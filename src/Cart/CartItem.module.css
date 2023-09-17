@@ -55,7 +55,11 @@ main .img {
   font-size: small;
   color: var(--dark-grayish-blue);
 }
-.cartContainer button {
+
+.cartContainer .checkout {
+  margin: 20px 0;
+}
+.cartContainer .checkout button {
   width: 100%;
   padding: 15px;
   border: none;
@@ -63,7 +67,6 @@ main .img {
   background-color: var(--orange-color);
   color: white;
   font-weight: 600;
-  margin-bottom: 40px;
 }
 
 main .cartIcon {
@@ -79,7 +82,30 @@ main .cartIcon {
   margin: 0 4px;
 }
 
-.productDetails .price span.totalPrice{
+.productDetails .price span.totalPrice {
   font-weight: bolder;
   color: var(--very-dark-blue);
+}
+
+.mainContainer .counter {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+
+  border: transparent 1px solid;
+  border-radius: 10px;
+}
+
+.mainContainer .counter button {
+  margin: 0;
+  padding: 5px;
+  width: 10%;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--orange-color);
+}
+
+.mainContainer .counter span {
+  font-weight: 800;
 }

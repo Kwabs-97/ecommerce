@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../store/cart-slice";
 
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
@@ -21,19 +21,6 @@ const ProductItem = (props) => {
     );
   };
 
-  const removeItemFromCartHandler = () => {
-    dispatch(cartActions.removeItemFromCart(props.id));
-  };
-
-  const [counter, setCounter] = useState(0);
-  function decrementCounter() {
-    setCounter((prevCounter) => prevCounter > 0 && prevCounter - 1);
-  }
-
-  function incrementCounter() {
-    setCounter((nextCounter) => (nextCounter += 1));
-  }
-
   return (
     <aside className={styles.description}>
       <h4>Sneaker Company</h4>
@@ -49,24 +36,9 @@ const ProductItem = (props) => {
       </div>
 
       <section className={styles.counterContainer}>
-        <div className={styles.counter}>
-          <button onClick={() => {
-            decrementCounter();
-            removeItemFromCartHandler()
-          }}>-</button>
-          <span>{counter}</span>
-          <button
-            onClick={() => {
-              incrementCounter();
-              addToCartHandler();
-            }}
-          >
-            +
-          </button>
-        </div>
         <div className={styles.addToCart}>
           <button onClick={addToCartHandler}>
-            <ShoppingCartOutlinedIcon className={styles.cartIcon} /> <span>Add to cart</span>
+            <ShoppingCartOutlinedIcon className={styles.cartIcon} /> <span>Add to cart </span>
           </button>
         </div>
       </section>

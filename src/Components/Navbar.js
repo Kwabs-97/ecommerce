@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className={styles.cart}>
           <div className={styles.cartIcon} onClick={cartToggleHandler}>
             <AiOutlineShoppingCart className={styles.cartIcon} />
-            <small>{ totalQuantity}</small>
+            {totalQuantity > 0 && <small>{totalQuantity}</small>}
           </div>
 
           <div className={styles.profile}>
