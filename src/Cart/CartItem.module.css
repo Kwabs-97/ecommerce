@@ -99,7 +99,7 @@ main .cartIcon {
 .mainContainer .counter button {
   margin: 0;
   padding: 5px;
-  width: 10%;
+  width: 20%;
   color: white;
   border: none;
   border-radius: 5px;
@@ -108,4 +108,17 @@ main .cartIcon {
 
 .mainContainer .counter span {
   font-weight: 800;
+}
+
+.cartContainer .emptyCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 105px 70px;
+}
+
+.cartContainer .emptyCart p {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark-grayish-blue);
 }

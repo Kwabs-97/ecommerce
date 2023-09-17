@@ -10,7 +10,7 @@ import { cartActions } from "../store/cart-slice";
 const CartItem = (props) => {
   const [counter, setCounter] = useState(0);
   const dispatch = useDispatch();
-  
+
   const totalQuantity = useSelector((state) => state.cartReducer.totalQuantity);
 
   const totalPrice = props.discountPrice * totalQuantity;
@@ -37,34 +37,40 @@ const CartItem = (props) => {
           <span>Cart</span>
         </header>
 
-        <div className={styles.mainContainer}>
-          <main>
-            <img src={produtcImg} alt="productIMG" />
+        {totalQuantity > 0 ? (
+          <div className={styles.mainContainer}>
+            <main>
+              <img src={produtcImg} alt="productIMG" />
 
-            <div className={styles.productDetails}>
+              <div className={styles.productDetails}>
+                <div>
+                  <span>{props.name}</span>
+                </div>
+                <div className={styles.price}>
+                  <span className={styles.discountPrice}>{`$${props.discountPrice}.00`}</span>{" "}
+                  <span> x </span>
+                  <span className={styles.totalQuantity}>{totalQuantity}</span>
+                  <span className={styles.totalPrice}>{`$${totalPrice}.00`}</span>
+                </div>
+              </div>
               <div>
-                <span>{props.name}</span>
+                <RiDeleteBin5Line className={styles.cartIcon} />
               </div>
-              <div className={styles.price}>
-                <span className={styles.discountPrice}>{`$${props.discountPrice}.00`}</span>{" "}
-                <span> x </span>
-                <span className={styles.totalQuantity}>{totalQuantity}</span>
-                <span className={styles.totalPrice}>{`$${totalPrice}.00`}</span>
-              </div>
+            </main>
+            <div className={styles.counter}>
+              <button onClick={removeItemFromCartHandler}>-</button>
+              <span>{totalQuantity}</span>
+              <button onClick={addToCartHandler}>+</button>
             </div>
-            <div>
-              <RiDeleteBin5Line className={styles.cartIcon} />
+            <div className={styles.checkout}>
+              <button>Checkout</button>
             </div>
-          </main>
-          <div className={styles.counter}>
-            <button onClick={removeItemFromCartHandler}>-</button>
-            <span>{totalQuantity}</span>
-            <button onClick={addToCartHandler}>+</button>
           </div>
-          <div className={styles.checkout}>
-            <button>Checkout</button>
+        ) : (
+          <div className={styles.emptyCart}>
+            <p> Your cart is empty</p>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
