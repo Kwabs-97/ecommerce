@@ -58,9 +58,11 @@ main .img {
 
 .cartContainer .checkout {
   margin: 20px 0;
+  display: flex;
+  justify-content: center;
 }
 .cartContainer .checkout button {
-  width: 100%;
+  width: 80%;
   padding: 15px;
   border: none;
   border-radius: 5px;
@@ -87,6 +89,10 @@ main .cartIcon {
   color: var(--very-dark-blue);
 }
 
+.cartContainer {
+  width: 370px;
+  height: 370px;
+}
 .mainContainer .counter {
   display: flex;
   justify-content: space-around;
@@ -99,7 +105,8 @@ main .cartIcon {
 .mainContainer .counter button {
   margin: 0;
   padding: 5px;
-  width: 20%;
+  width: 10%;
+padding: 10px;
   color: white;
   border: none;
   border-radius: 5px;
@@ -114,7 +121,8 @@ main .cartIcon {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 78px;
+  width: 100%;
+  height: 100%;
 }
 
 .cartContainer .emptyCart p {
