@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import { AiOutlineMenu, AiOutlineClose, AiOutlineShoppingCart } from "react-icons/ai";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { uiActions } from "../store/ui-slice";
 
 import avatar from "../assets/images/image-avatar.png";
@@ -16,6 +16,8 @@ import styles from "../Styles/Navbar.module.css";
 const Navbar = () => {
   const [istoggled, setIsToggled] = useState(false);
   const dispatch = useDispatch();
+
+  const showcart = useSelector((state) => state.uiReducer.cartIsVisible);
 
   const cartToggleHandler = () => {
     dispatch(uiActions.toggle());
@@ -42,7 +44,10 @@ const Navbar = () => {
           <NavLink>Contact</NavLink>
         </div>
         <div className={styles.cart}>
-          <AiOutlineShoppingCart className={styles.cartIcon} onClick={cartToggleHandler} />
+          <div className={styles.cartIcon}>
+            <AiOutlineShoppingCart className={styles.cartIcon} onClick={cartToggleHandler} />
+            <small>3</small>
+          </div>
 
           <div className={styles.profile}>
             <img src={avatar} alt="avatar" />

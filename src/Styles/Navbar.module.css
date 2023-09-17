@@ -11,6 +11,8 @@
   --grayish-blue: hsl(220, 14%, 75%);
   --black: hsl(0, 0%, 0%);
   --very-dark-blue: hsl(220, 13%, 13%);
+  --orange-color: hsl(26, 100%, 55%);
+  --pale-orange-color: hsl(25, 100%, 94%);
 }
 
 .navContainer {
@@ -37,6 +39,8 @@
   transition: all 0.3s ease;
 }
 
+
+
 .navContainer .navItemsContainer .hamburger {
   display: flex;
   justify-content: center;
@@ -61,10 +65,23 @@
 .navContainer .navItemsContainer .cart img {
   width: 24px;
   height: 24px;
+  margin: 0 12px;
 }
 
 .navContainer .navItemsContainer .cart svg.cartIcon {
-  margin: 0 12px;
+  font-size: 24px;
+  color: black;
+}
+.cart .cartIcon small {
+  position: absolute;
+  right: 60px;
+  font-size: 9px;
+  top: 10px;
+  border: 1px solid transparent;
+  padding:1px 6px;
+  color:var(--pale-orange-color);
+  background-color: var(--orange-color);
+  border-radius: 10px;
 }
 
 .navContainer .dropdown {
@@ -80,7 +97,6 @@
   left: 16px;
   transition: all 0.3s ease;
 }
-
 
 .navContainer .sidebarItems > svg {
   margin-bottom: 30px;
