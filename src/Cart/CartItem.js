@@ -8,6 +8,8 @@ import { useSelector } from "react-redux";
 
 const CartItem = (props) => {
   const totalQuantity = useSelector((state) => state.cartReducer.totalQuantity);
+  const totalPrice = props.discountPrice * totalQuantity;
+
   return (
     <div>
       <div className={styles.cartContainer}>
@@ -22,8 +24,10 @@ const CartItem = (props) => {
               <span>{props.name}</span>
             </div>
             <div className={styles.price}>
-              <span>{`$${props.price}.00`}</span> x <span>{totalQuantity}</span>
-              <span>totalPrice</span>
+              <span className={styles.discountPrice}>{`$${props.discountPrice}.00`}</span>{" "}
+              <span> x </span>
+              <span className={styles.totalQuantity}>{totalQuantity}</span>
+              <span className={styles.totalPrice}>{`$${totalPrice}.00`}</span>
             </div>
           </div>
           <div>
