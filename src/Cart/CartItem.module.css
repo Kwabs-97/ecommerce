@@ -9,15 +9,23 @@
   --dark-grayish-blue: hsl(219, 9%, 45%);
   --light-grayish-blue: hsl(223, 64%, 98%);
 }
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .cartContainer {
   display: flex;
   flex-direction: column;
-  margin: 10px;
   position: absolute;
   border: transparent solid 1px;
   border-radius: 20px;
   background-color: white;
   padding: 0 10px;
+  width: 90%;
+  height: 45%;
+  top: 12%;
 }
 
 .cartContainer main {
@@ -89,10 +97,6 @@ main .cartIcon {
   color: var(--very-dark-blue);
 }
 
-.cartContainer {
-  width: 370px;
-  height: 370px;
-}
 .mainContainer .counter {
   display: flex;
   justify-content: space-around;
@@ -106,7 +110,7 @@ main .cartIcon {
   margin: 0;
   padding: 5px;
   width: 10%;
-padding: 10px;
+  padding: 5px;
   color: white;
   border: none;
   border-radius: 5px;

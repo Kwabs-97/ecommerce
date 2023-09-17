@@ -31,7 +31,7 @@ const CartItem = (props) => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles.cartContainer}>
         <header>
           <span>Cart</span>
