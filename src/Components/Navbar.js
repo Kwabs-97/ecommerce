@@ -14,10 +14,11 @@ import { NavLink } from "react-router-dom";
 import styles from "../Styles/Navbar.module.css";
 
 const Navbar = () => {
+  //selecting total quantity to show on cartIcon badge
+  const totalQuantity = useSelector((state) => state.cartReducer.totalQuantity);
+
   const [istoggled, setIsToggled] = useState(false);
   const dispatch = useDispatch();
-
-  const showcart = useSelector((state) => state.uiReducer.cartIsVisible);
 
   const cartToggleHandler = () => {
     dispatch(uiActions.toggle());
@@ -44,9 +45,9 @@ const Navbar = () => {
           <NavLink>Contact</NavLink>
         </div>
         <div className={styles.cart}>
-          <div className={styles.cartIcon}>
-            <AiOutlineShoppingCart className={styles.cartIcon} onClick={cartToggleHandler} />
-            <small>3</small>
+          <div className={styles.cartIcon} onClick={cartToggleHandler}>
+            <AiOutlineShoppingCart className={styles.cartIcon} />
+            <small>{ totalQuantity}</small>
           </div>
 
           <div className={styles.profile}>

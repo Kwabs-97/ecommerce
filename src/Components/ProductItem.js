@@ -1,9 +1,8 @@
 /** @format */
 
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../store/cart-slice";
-import { ShopContext } from "../context/shop-context";
 
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import styles from "../Styles/ProductItem.module.css";
@@ -18,9 +17,12 @@ const ProductItem = (props) => {
         name: props.name,
         description: props.description,
         price: props.price,
-        discount: props.discount,
       })
     );
+  };
+
+  const removeItemFromCartHandler = () => {
+    dispatch(cartActions.removeItemFromCart(props.id));
   };
 
   const [counter, setCounter] = useState(0);
@@ -31,8 +33,6 @@ const ProductItem = (props) => {
   function incrementCounter() {
     setCounter((nextCounter) => (nextCounter += 1));
   }
-
-  const { addToCart } = useContext(ShopContext);
 
   return (
     <aside className={styles.description}>
@@ -50,12 +50,22 @@ const ProductItem = (props) => {
 
       <section className={styles.counterContainer}>
         <div className={styles.counter}>
-          <button onClick={decrementCounter}>-</button>
+          <button onClick={() => {
+            decrementCounter();
+            removeItemFromCartHandler()
+          }}>-</button>
           <span>{counter}</span>
-          <button onClick={incrementCounter}>+</button>
+          <button
+            onClick={() => {
+              incrementCounter();
+              addToCartHandler();
+            }}
+          >
+            +
+          </button>
         </div>
         <div className={styles.addToCart}>
-          <button onClick={() => addToCart(props.id)}>
+          <button onClick={addToCartHandler}>
             <ShoppingCartOutlinedIcon className={styles.cartIcon} /> <span>Add to cart</span>
           </button>
         </div>

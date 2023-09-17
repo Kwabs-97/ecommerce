@@ -4,8 +4,10 @@ import React from "react";
 import styles from "./CartItem.module.css";
 import produtcImg from "../assets/images/image-product-1.jpg";
 import { RiDeleteBin5Line } from "react-icons/ri";
+import { useSelector } from "react-redux";
 
 const CartItem = (props) => {
+  const totalQuantity = useSelector((state) => state.cartReducer.totalQuantity);
   return (
     <div>
       <div className={styles.cartContainer}>
@@ -20,7 +22,7 @@ const CartItem = (props) => {
               <span>{props.name}</span>
             </div>
             <div className={styles.price}>
-              <span>{`$${props.price}.00`}</span> x <span>quantity</span>
+              <span>{`$${props.price}.00`}</span> x <span>{totalQuantity}</span>
               <span>totalPrice</span>
             </div>
           </div>
