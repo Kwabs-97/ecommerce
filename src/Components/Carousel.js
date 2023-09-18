@@ -57,11 +57,7 @@ const Carousel = () => {
           onClick={nextSlide}
         />
 
-        {/* <span className={styles.indicators}>
-          {data.map((_, index) => {
-            return <button key={index} onClick={null} className={styles.indicator}></button>;
-          })}
-        </span> */}
+      
       </div>
     </div>
   );

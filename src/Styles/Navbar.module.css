@@ -39,8 +39,6 @@
   transition: all 0.3s ease;
 }
 
-
-
 .navContainer .navItemsContainer .hamburger {
   display: flex;
   justify-content: center;
@@ -78,8 +76,8 @@
   font-size: 9px;
   top: 10px;
   border: 1px solid transparent;
-  padding:1px 6px;
-  color:var(--pale-orange-color);
+  padding: 1px 6px;
+  color: var(--pale-orange-color);
   background-color: var(--orange-color);
   border-radius: 10px;
 }
@@ -141,6 +139,9 @@
 
   .navContainer .navItemsContainer .cart svg.cartIcon {
     margin: 0 30px;
+  }
+  .navContainer .navItemsContainer .cart svg.cartIcon:hover {
+    cursor: pointer;
   }
 
   .navContainer .navItemsContainer .hamburger h1 {
