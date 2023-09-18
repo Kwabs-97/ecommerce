@@ -48,3 +48,42 @@
   align-items: center;
   padding: 5px;
 }
+
+.bigCarousel {
+  display: none;
+}
+
+@media (min-width: 768px) {
+
+.mainContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 0 50px;
+}
+
+  .imgContainer {
+    display: none;
+  }
+
+  .bigCarousel {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bigCarousel > img{
+    border-radius: 10px;
+    margin: 15px 0;
+  }
+
+  .multiImgs {
+    display: flex;
+  }
+
+  .multiImgs img{
+    padding: 5px;
+    border-radius: 10px;
+  }
+}
