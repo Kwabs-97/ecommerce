@@ -128,6 +128,7 @@
   .navContainer .navItemsContainer {
     margin: 18px 100px;
   }
+
   .navContainer .navItemsContainer svg.hamburger {
     display: none;
   }
@@ -161,6 +162,12 @@
     font-size: 14px;
     color: var(--grayish-blue);
   }
+
+  .cart .cartIcon small {
+    right: 160px;
+    top:22px ;
+  }
+
 
   .navContainer .navItemsContainer {
     padding-bottom: 50px;
