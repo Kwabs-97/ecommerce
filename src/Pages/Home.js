@@ -63,6 +63,7 @@ const Home = (props) => {
             name={product.name}
             key={product.id}
             price={product.price}
+            description={product.description}
             discount={product.discount}
             discountPrice={product.discountPrice}
           />
