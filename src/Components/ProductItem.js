@@ -35,13 +35,11 @@ const ProductItem = (props) => {
         <h5>{`$${props.price}`}</h5>
       </div>
 
-      <section className={styles.counterContainer}>
-        <div className={styles.addToCart}>
-          <button onClick={addToCartHandler}>
-            <ShoppingCartOutlinedIcon className={styles.cartIcon} /> <span>Add to cart </span>
-          </button>
-        </div>
-      </section>
+      <div className={styles.addToCart}>
+        <button onClick={addToCartHandler}>
+          <ShoppingCartOutlinedIcon className={styles.cartIcon} /> <span>Add to cart </span>
+        </button>
+      </div>
     </aside>
   );
 };
