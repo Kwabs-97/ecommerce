@@ -165,12 +165,27 @@
 
   .cart .cartIcon small {
     right: 160px;
-    top:22px ;
+    top: 22px;
   }
-
 
   .navContainer .navItemsContainer {
     padding-bottom: 50px;
     border-bottom: 1px var(--grayish-blue) solid;
+  }
+}
+
+@media (min-width: 800px) {
+  .cart .cartIcon small {
+    right: 185px;
+    top: 22px;
+  }
+}
+
+
+
+@media (min-width: 1024px) {
+  .cart .cartIcon small {
+    right: 190px;
+    top: 22px;
   }
 }
