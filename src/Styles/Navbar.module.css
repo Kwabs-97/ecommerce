@@ -83,6 +83,7 @@
 .navContainer .dropdown {
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 
 .navContainer .sidebarItems {
