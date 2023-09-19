@@ -53,7 +53,7 @@ const CartItem = (props) => {
               </div>
             </div>
             <div>
-              <RiDeleteBin5Line className={styles.cartIcon} />
+              <RiDeleteBin5Line className={styles.cartIcon} onClick={removeItemFromCartHandler} />
             </div>
           </main>
           <div className={styles.counter}>
