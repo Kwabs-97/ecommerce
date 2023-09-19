@@ -19,7 +19,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 0.3s ease;
 }
 
 .navContainer svg {
@@ -36,7 +35,6 @@
   justify-content: space-between;
   width: 100%;
   margin: 12px 16px;
-  transition: all 0.3s ease;
 }
 
 .navContainer .navItemsContainer .hamburger {
@@ -85,7 +83,6 @@
 .navContainer .dropdown {
   display: flex;
   flex-direction: column;
-  transition: all 0.3s ease;
 }
 
 .navContainer .sidebarItems {
@@ -93,7 +90,6 @@
   top: 18px;
   right: 0;
   left: 16px;
-  transition: all 0.3s ease;
 }
 
 .navContainer .sidebarItems > svg {
@@ -121,12 +117,16 @@
   left: 0;
   height: 100vh;
   background-color: white;
-  transition: all 0.3s ease;
+}
+
+.cart .profile:hover {
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
   .navContainer .navItemsContainer {
     margin: 18px 100px;
+    transition: 0.3s ease all;
   }
 
   .navContainer .navItemsContainer svg.hamburger {
@@ -140,9 +140,12 @@
 
   .navContainer .navItemsContainer .cart svg.cartIcon {
     margin: 0 30px;
+    transition: 0.3s ease all;
   }
   .navContainer .navItemsContainer .cart svg.cartIcon:hover {
     cursor: pointer;
+    color: lightslategray;
+    transition: 0.3s ease all;
   }
 
   .navContainer .navItemsContainer .hamburger h1 {
@@ -161,6 +164,13 @@
     margin: 0 10px;
     font-size: 14px;
     color: var(--grayish-blue);
+    transition: 0.3s ease all;
+  }
+
+  .navContainer .navItemsContainer .navPC a:hover {
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--orange-color);
+    transition: 0.3s ease-in-out all;
   }
 
   .cart .cartIcon small {
@@ -180,8 +190,6 @@
     top: 22px;
   }
 }
-
-
 
 @media (min-width: 1024px) {
   .cart .cartIcon small {
