@@ -53,7 +53,7 @@ const Home = (props) => {
                 height="50"
                 width="50"
                 onClick={() => handleClick(index)}
-                className={styles.thumbnail}
+                className={`${sliderData.id == index ? styles.clicked : styles.thumbnail}`}
               />
             ))}
           </div>

@@ -110,6 +110,7 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    
   }
 
   .addToCart button:hover {
@@ -120,5 +121,8 @@
   .description .addToCart {
     display: flex;
     justify-content: center;
+  }
+  .description .priceContainer {
+    margin-bottom: 40px;
   }
 }
