@@ -32,8 +32,9 @@
   top: 8%;
   right: 5%;
   height: 48%;
+  box-shadow: 10px 10px 15px var(--dark-grayish-blue);
   border: transparent solid 1px;
-  background-color: white;
+  background-color: rgb(234, 247, 251);
   border-radius: 20px;
   z-index: 1;
 }
