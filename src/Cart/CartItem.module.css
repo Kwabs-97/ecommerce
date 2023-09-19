@@ -136,8 +136,13 @@ main .cartIcon {
 
   main svg {
     font-size: 20px;
+    transition: all ease 0.3s;
   }
 
+  main svg:hover {
+    transform: scale(1.2);
+    transition: all ease 0.3s;
+  }
   .counter button {
     transition: all 0.2s ease-in-out;
   }
