@@ -143,13 +143,32 @@ main .cartIcon {
     transform: scale(1.2);
     transition: all ease 0.3s;
   }
-  .counter button {
+
+  .counter {
+    background-color: rgba(176, 223, 252, 0.356);
+    padding: 5px;
+    margin: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainContainer .counter button {
     transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    color: var(--orange-color);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .mainContainer .counter span{
+   
+    align-self: center;
   }
 
   .counter button:hover {
     transform: scale(1.1);
-    transition: all 0.1s ease-in-out;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
   }
 
