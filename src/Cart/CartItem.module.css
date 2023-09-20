@@ -144,16 +144,13 @@ main .cartIcon {
     transition: all ease 0.3s;
   }
   .counter button {
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   .counter button:hover {
+    transform: scale(1.1);
+    transition: all 0.1s ease-in-out;
     cursor: pointer;
-  }
-
-  .counter button:hover {
-    transform: scale(1.2);
-    transition: ease all 0.2s;
   }
 
   main svg:hover {
