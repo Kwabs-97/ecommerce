@@ -161,13 +161,12 @@ main .cartIcon {
     text-align: center;
   }
 
-  .mainContainer .counter span{
-   
+  .mainContainer .counter span {
     align-self: center;
   }
 
   .counter button:hover {
-    transform: scale(1.1);
+    transform: scale(1.8);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
   }
@@ -177,10 +176,14 @@ main .cartIcon {
     cursor: pointer;
   }
 
-  main .checkout button {
+ .mainContainer .checkout {
+    margin: 10px 0;
+  }
+
+  .mainContainer .checkout button {
     transition: all 0.2s ease-in-out;
   }
-  main .checkout button:hover {
+  .mainContainer .checkout button:hover {
     transform: scale(0.98);
     transition: all 0.2s ease-in-out;
     cursor: pointer;
