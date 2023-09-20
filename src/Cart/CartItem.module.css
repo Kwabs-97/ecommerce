@@ -160,4 +160,13 @@ main .cartIcon {
     color: red;
     cursor: pointer;
   }
+
+  main .checkout button {
+    transition: all 0.2s ease-in-out;
+  }
+  main .checkout button:hover {
+    transform: scale(0.98);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
 }
