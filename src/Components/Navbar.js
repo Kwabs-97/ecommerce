@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { AiOutlineMenu, AiOutlineClose, AiOutlineShoppingCart } from "react-icons/ai";
 
@@ -27,6 +27,12 @@ const Navbar = () => {
   const toggleHandler = () => {
     setIsToggled(!istoggled);
   };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", () => {
+      setIsToggled(false);
+    });
+  }); 
 
   return (
     <nav className={styles.navContainer}>
