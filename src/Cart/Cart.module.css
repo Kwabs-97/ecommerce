@@ -41,6 +41,8 @@
 
 .checkout {
   margin: 10px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .checkout button {
@@ -48,15 +50,40 @@
   border: none;
   background-color: var(--orange-color);
   outline: none;
-  width: 50%;
+  width: 40%;
   padding: 10px 0;
   border-radius: 10px;
   color: white;
   text-align: center;
+  margin: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.checkout a {
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  background-color: var(--orange-color);
+  outline: none;
+  width: 40%;
+  padding: 10px 0;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkout a:hover {
+  transform: scale(0.98);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
 .checkout button:hover {
   transform: scale(0.98);
   transition: all 0.2s ease-in-out;

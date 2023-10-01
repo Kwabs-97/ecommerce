@@ -9,7 +9,7 @@ import { uiActions } from "../store/ui-slice";
 
 import avatar from "../assets/images/image-avatar.png";
 
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import styles from "../Styles/Navbar.module.css";
 
@@ -32,7 +32,7 @@ const Navbar = () => {
     document.addEventListener("mousedown", () => {
       setIsToggled(false);
     });
-  }); 
+  });
 
   return (
     <nav className={styles.navContainer}>
@@ -52,7 +52,9 @@ const Navbar = () => {
         </div>
         <div className={styles.cart}>
           <div className={styles.cartIcon} onClick={cartToggleHandler}>
-            <AiOutlineShoppingCart className={styles.cartIcon} />
+            <Link>
+              <AiOutlineShoppingCart className={styles.cartIcon}></AiOutlineShoppingCart>
+            </Link>
             {totalQuantity > 0 && <small>{totalQuantity}</small>}
           </div>
 

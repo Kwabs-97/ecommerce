@@ -61,9 +61,7 @@ const CartItem = (props) => {
             <span>{totalQuantity}</span>
             <button onClick={addToCartHandler}>+</button>
           </div>
-          <div className={styles.checkout}>
-            <button>Checkout {`$${totalPrice}`}</button>
-          </div>
+        
         </div>
       ) : (
         <div className={styles.emptyCart}>
