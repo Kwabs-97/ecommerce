@@ -6,9 +6,10 @@ import CartItem from "./CartItem";
 import styles from "./Cart.module.css";
 import Modal from "../UI/Modal";
 
-const Cart = (props) => {
+const Cart = () => {
+  const products = productsData[0];
   const totalQuantity = useSelector((state) => state.cartReducer.totalQuantity);
-  const totalPrice = props.discountPrice * totalQuantity;
+  const totalPrice = products.discountPrice * totalQuantity;
   return (
     <Modal>
       {productsData.map((product) => (

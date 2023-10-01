@@ -1,6 +1,7 @@
 /** @format */
 import productImg from "../assets/images/image-product-1.jpg";
-export const productsData = [
+export const
+  productsData = [
   {
     id: 1,
     img: productImg,

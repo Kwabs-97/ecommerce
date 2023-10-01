@@ -45,6 +45,17 @@
 
 .checkout button {
   transition: all 0.2s ease-in-out;
+  border: none;
+  background-color: var(--orange-color);
+  outline: none;
+  width: 50%;
+  padding: 10px 0;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .checkout button:hover {
   transform: scale(0.98);
