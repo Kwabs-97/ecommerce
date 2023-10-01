@@ -21,23 +21,25 @@ const Cart = () => {
   };
 
   return (
-    <Modal onClose={hideCart}>
-      {productsData.map((product) => (
-        <CartItem
-          key={product.id}
-          img={product.img}
-          name={product.name}
-          price={product.price}
-          discountPrice={product.discountPrice}
-          quantity={product.quantity}
-        />
-      ))}
-      <div className={styles.checkout}>
-        {totalPrice > 0 && <button>Checkout {`$${totalPrice}`}</button>}
+  
+      <Modal onClose={hideCart}>
+        {productsData.map((product) => (
+          <CartItem
+            key={product.id}
+            img={product.img}
+            name={product.name}
+            price={product.price}
+            discountPrice={product.discountPrice}
+            quantity={product.quantity}
+          />
+        ))}
+        <div className={styles.checkout}>
+          {totalPrice > 0 && <button>Checkout {`$${totalPrice}`}</button>}
 
-        <Link onClick={hideCart}>Cancel</Link>
-      </div>
-    </Modal>
+          <Link onClick={hideCart}>Cancel</Link>
+        </div>
+      </Modal>
+  
   );
 };
 
