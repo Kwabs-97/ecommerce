@@ -39,6 +39,19 @@
   z-index: 1;
 }
 
+.checkout {
+  margin: 10px 0;
+}
+
+.checkout button {
+  transition: all 0.2s ease-in-out;
+}
+.checkout button:hover {
+  transform: scale(0.98);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   .cartCont {
     display: flex;
