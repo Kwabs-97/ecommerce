@@ -21,7 +21,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
 
   const cartToggleHandler = () => {
-    dispatch(uiActions.toggle());
+    dispatch(uiActions.showCart());
   };
 
   const toggleHandler = () => {
