@@ -22,6 +22,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 1rem;
 }
 
 header {
@@ -89,23 +90,23 @@ main .cartIcon {
 }
 
 .mainContainer .counter {
+  background-color: rgba(176, 223, 252, 0.356);
+  padding: 5px;
+  margin: 0 10px;
   display: flex;
-  justify-content: space-around;
-  align-items: start;
-
-  border: transparent 1px solid;
-  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .mainContainer .counter button {
-  margin: 0;
-  padding: 5px;
-  width: 10%;
-  padding: 5px;
-  color: white;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  color: var(--orange-color);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
   border: none;
-  border-radius: 5px;
-  background-color: var(--orange-color);
+  margin:0 4rem;
 }
 
 .mainContainer .counter span {
@@ -144,14 +145,6 @@ main .cartIcon {
     transition: all ease 0.3s;
   }
 
-  .counter {
-    background-color: rgba(176, 223, 252, 0.356);
-    padding: 5px;
-    margin: 0 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .mainContainer .counter button {
     transition: all 0.3s ease-in-out;
     background-color: transparent;
@@ -175,6 +168,4 @@ main .cartIcon {
     color: red;
     cursor: pointer;
   }
-
-
 }
