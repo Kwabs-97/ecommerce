@@ -1,6 +1,5 @@
 /** @format */
 
-import React, { useState } from "react";
 import styles from "./CartItem.module.css";
 import produtcImg from "../assets/images/image-product-1.jpg";
 import { RiDeleteBin5Line } from "react-icons/ri";
@@ -8,7 +7,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { cartActions } from "../store/cart-slice";
 
 const CartItem = (props) => {
-  const [counter, setCounter] = useState(0);
   const dispatch = useDispatch();
 
   const totalQuantity = useSelector((state) => state.cartReducer.totalQuantity);
@@ -61,7 +59,6 @@ const CartItem = (props) => {
             <span>{totalQuantity}</span>
             <button onClick={addToCartHandler}>+</button>
           </div>
-        
         </div>
       ) : (
         <div className={styles.emptyCart}>

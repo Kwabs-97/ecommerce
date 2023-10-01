@@ -36,7 +36,7 @@ const Cart = () => {
         <div className={styles.checkout}>
           {totalPrice > 0 && <button>Checkout {`$${totalPrice}`}</button>}
 
-          <Link onClick={hideCart}>Cancel</Link>
+          <button onClick={hideCart}>Cancel</button>
         </div>
       </Modal>
   
