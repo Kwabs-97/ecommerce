@@ -170,6 +170,7 @@
 
   .navContainer .navItemsContainer .navPC a:hover {
     padding-bottom: 15px;
+    color: #101010;
     border-bottom: 2px solid var(--orange-color);
     transition: 0.3s ease-in-out all;
   }
